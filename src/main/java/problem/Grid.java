@@ -104,12 +104,12 @@ public class Grid {
 		
 		@Override
 		public boolean equals(Object that) {
-			return this.toString().equals(that.toString());
+			return x == ((Grid.Coord)that).x && y == ((Grid.Coord)that).y;
 		}
 		
 		@Override
 		public int hashCode() {
-			return toString().hashCode();
+			return Integer.hashCode(x * y);
 		}
 		
 		@Override
